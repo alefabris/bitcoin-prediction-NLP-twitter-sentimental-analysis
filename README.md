@@ -56,14 +56,14 @@ To proceed with the exploratory analysis, we choose to introduce a dichotomous v
 Bar graphs are used to represent the most frequent tokens and hashtags, distinguished between tweets associated with an increasing trend and others associated with a
 decreasing trend.
 
-![Figure 1]()
+![Figure 1](https://github.com/alefabris/bitcoin-prediction-NLP-twitter-sentimental-analysis/blob/main/chart/20%20token.png)
 
 Figure 1: *Left: most frequent tokens in tweets linked to an increasing trend. Right: most frequent tokens in tweets linked to a downward trend.*
 
 Please note that the *"link"* token appears very often as all the internet addresses contained in the tweets are replaced by the word in question.
 In figure 1 we note how the word that appears most frequently is bitcoin, both in messages linked to an increasing and a decreasing trend.
 
-![Figure 2]()
+![Figure 2](https://github.com/alefabris/bitcoin-prediction-NLP-twitter-sentimental-analysis/blob/main/chart/5%20hashtag.png)
 
 Figure 2: *Left: most frequent hashtags in tweets associated with a growing trend. Right: Most frequent hashtags in tweets associated with a bearish trend.*
 
@@ -71,7 +71,7 @@ Figure 2 shows how the most frequent hashtags are #bitcoincash and #bitcoin, bot
 
 A further graphical analysis via *WordCloud* shows us the frequency of the words most present in the tweets associated with the rise and fall in the value of BTCs through their size (Fig. 3).
 
-![Figure 3]()
+![Figure 3](https://github.com/alefabris/bitcoin-prediction-NLP-twitter-sentimental-analysis/blob/main/chart/wordcloud.png)
 
 Figure 3: *WordCloud with tweets associated with rising (left) or falling value (right)*
 
@@ -86,13 +86,15 @@ A more sensible approach is based on the use of decision trees. Two types are im
 * *Minimum decrease in impurities per split*
 The values of the hyperparameters are chosen from a set of possible values. The tree with default hyperparameters has an accuracy of 53.9%, following optimization this indicator rises to *54.2%* (Fig. 4).
 
-![Figure 4]()
+![Figure 4](https://github.com/alefabris/bitcoin-prediction-NLP-twitter-sentimental-analysis/blob/main/chart/tree.png)
 
 Figure 4: *Classification tree with hyperparameter optimization*
 
 The last approach discussed concerns logistic regression. Two different models are compared: logistic regression with likelihood penalty,
 where one must choose an optimal penalty parameter, and logistic regression based on principal components to reduce dimensionality.
 The penalized log-likelihood takes the following form:
+
+![Figure 5](https://github.com/alefabris/bitcoin-prediction-NLP-twitter-sentimental-analysis/blob/main/chart/penalized%20log-likelihood.png)
 
 in which the intercept is not penalized and where λ represents the penalty parameter to be optimized.
 The logistic regression based on the penalized likelihood reaches an accuracy of *53.9%*, with the PCA, on the other hand, only *50.8%* is obtained.
