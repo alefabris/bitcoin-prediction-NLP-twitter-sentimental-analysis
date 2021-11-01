@@ -1,4 +1,4 @@
-# Textual analysis of the tweets in order to predict the trend in the value of Bitcoins
+# Textual analysis of the tweets in order to predict the trend of the value of Bitcoins
 
 ## Index
 1. [Introduction](#intro)<br>
